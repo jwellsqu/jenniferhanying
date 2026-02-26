@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching | Jennifer Hanying</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .coaching-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+      margin-top: 73px;
+    }
+    .coaching-hero-text {
+      padding: 7rem 5rem 5rem 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .coaching-hero-img {
+      background: linear-gradient(160deg, #2a2825 0%, #1a1a18 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.2); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .coaching-hero-text h1 { margin-bottom: 1.5rem; }
+    .coaching-hero-text p { color: var(--text-light); max-width: 480px; margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.9; }
+
+    .coaching-intro {
+      padding: 7rem 6rem;
+      background: var(--off-white);
+      text-align: center;
+    }
+    .coaching-intro h2 { max-width: 700px; margin: 0 auto 2rem; }
+    .coaching-intro p { max-width: 580px; margin: 0 auto; color: var(--text-light); font-size: 1.05rem; line-height: 1.9; }
+
+    .offerings {
+      padding: 5rem 6rem 7rem;
+      background: var(--warm-white);
+    }
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .offering-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: 3rem;
+    }
+    .offering-card.featured {
+      background: var(--black);
+      color: #fff;
+      border-color: transparent;
+    }
+    .offering-card.featured h3 { color: #fff; }
+    .offering-card.featured p { color: rgba(255,255,255,0.65); }
+    .offering-card.featured .offering-tag { background: var(--blush-deep); color: #fff; }
+
+    .offering-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--blush-light);
+      color: var(--blush-deep);
+      padding: 0.3rem 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .offering-card h3 { margin-bottom: 1rem; }
+    .offering-card p { color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem; }
+    .offering-card ul {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    .offering-card ul li {
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .offering-card.featured ul li { color: rgba(255,255,255,0.6); }
+    .offering-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--blush-deep);
+    }
+
+    .process {
+      background: var(--black);
+      padding: 7rem 6rem;
+      color: #fff;
+    }
+    .process .section-label { color: var(--blush-deep); }
+    .process h2 { color: #fff; margin-bottom: 4rem; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .process-step { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; }
+    .step-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      color: rgba(232,196,174,0.3);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .process-step h4 { font-family: var(--serif); font-size: 1.2rem; color: var(--blush-light); margin-bottom: 0.75rem; }
+    .process-step p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.8; }
+
+    .coaching-testimonials {
+      padding: 7rem 6rem;
+      background: var(--off-white);
+    }
+
+    @media (max-width: 900px) {
+      .coaching-hero { grid-template-columns: 1fr; }
+      .coaching-hero-img { min-height: 50vw; }
+      .coaching-hero-text { padding: 4rem 2rem; }
+      .coaching-intro { padding: 5rem 2rem; }
+      .offerings { padding: 4rem 2rem; }
+      .offerings-grid { grid-template-columns: 1fr; }
+      .process { padding: 5rem 2rem; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .coaching-testimonials { padding: 5rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Jennifer Hanying</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html" class="active">Coaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu">&#9776;</button>
+  </nav>
+
+  <div class="coaching-hero">
+    <div class="coaching-hero-text">
+      <p class="page-hero-eyebrow">1:1 Transformational Coaching</p>
+      <h1>Design the life you <em>actually</em> want.</h1>
+      <p>Strategic coaching for high-achievers, visionaries, and anyone who knows there's more — and is ready to do the work to get there.</p>
+      <a href="contact.html" class="btn btn-dark">Work With Me</a>
+    </div>
+    <div class="coaching-hero-img"><span>Your photo here</span></div>
+  </div>
+
+  <div class="coaching-intro">
+    <div class="section-label">The Voyage</div>
+    <h2>Together, we'll dive deep into self-discovery.</h2>
+    <p>Whether you're a go-getting entrepreneur, a career-driven professional, or a visionary ready to make a difference — you'll get strategic guidance, mindset mastery, and practical tools to help you achieve extraordinary results.</p>
+  </div>
+
+  <div class="offerings">
+    <div class="section-label">How We Work Together</div>
+    <div class="offerings-grid">
+      <div class="offering-card featured">
+        <div class="offering-tag">Most Popular</div>
+        <h3>The Voyage — 1:1 Coaching</h3>
+        <p>My signature transformational coaching experience. We go deep, move fast, and build real momentum toward a life you're proud of.</p>
+        <ul>
+          <li>Bi-weekly 60-minute sessions</li>
+          <li>Full vision creation process</li>
+          <li>Values + strengths deep dive</li>
+          <li>Custom roadmap + accountability</li>
+          <li>Email support between sessions</li>
+          <li>Access to all my frameworks + resources</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blush">Inquire Now</a>
+      </div>
+      <div class="offering-card">
+        <div class="offering-tag">Free</div>
+        <h3>The Vision Creator</h3>
+        <p>Not ready to commit to full coaching yet? Start here. My free PDF guide walks you through the same vision-setting process I use with every client.</p>
+        <ul>
+          <li>Clarity on your goals for the year</li>
+          <li>Values alignment exercise</li>
+          <li>Actionable first steps</li>
+          <li>The framework behind The Voyage</li>
+        </ul>
+        <a href="index.html#vision" class="btn btn-dark">Get the Free Guide</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="process">
+    <div class="section-label">The Process</div>
+    <h2>How transformation happens.</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h4>Vision</h4>
+        <p>We get radically clear on what you actually want — not what you think you should want. This is the foundation of everything.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h4>Discovery</h4>
+        <p>We uncover your unique strengths, values, and the patterns holding you back. Real insight leads to real change.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h4>Strategy</h4>
+        <p>We build a custom roadmap — specific, actionable, aligned with who you are and where you're going.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h4>Momentum</h4>
+        <p>We move. Together. I hold you accountable, celebrate the wins, and help you grow through the hard moments.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="coaching-testimonials">
+    <div class="section-label">Client Stories</div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p class="t-quote">"Create and chase after bold visions."</p>
+        <p class="t-body">I wish everyone could experience the transformative impact of Jen's coaching: shifting into an ownership mentality, acting with true integrity, and pursuing ongoing growth. You owe it to yourself to try.</p>
+        <p class="t-attr">— Aliza Warwick, Safety Lead at AirBnB</p>
+      </div>
+      <div class="testimonial">
+        <p class="t-quote">"Complete life transformation."</p>
+        <p class="t-body">Through her empathetic and skilled approach, Jen unearthed my true vision and helped me jump from "high performer" to "meta performer." If you're not fully in love with the life you're living, now is your opportunity to change that.</p>
+        <p class="t-attr">— Liz Marandola, Director of Operations at Praytell</p>
+      </div>
+      <div class="testimonial">
+        <p class="t-quote">"So much more than a coach."</p>
+        <p class="t-body">For the first time, I'm designing a LIFE, not a career path. Jen is a confidant, a brilliant analyst with the uncanny ability to get to the root of any issue, and most importantly, a dear friend who has earned my unending trust.</p>
+        <p class="t-attr">— Shilpa Gadhok, Founder + CEO at See Good Strategy</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-dark">
+    <h2>Ready to rise?</h2>
+    <p>Take the first step. I'd love to hear from you.</p>
+    <a href="contact.html" class="btn btn-blush">Get in Touch</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Jennifer Hanying</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="education.html">Education</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Jennifer Hanying Wells-Qu · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

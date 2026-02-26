@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Jennifer Hanying</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      padding: 5rem 6rem 7rem;
+    }
+    .about-img-stack { position: relative; }
+    .about-img-main {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(160deg, var(--blush-light) 0%, var(--blush) 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--stone); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .about-img-secondary {
+      position: absolute;
+      bottom: -3rem; right: -3rem;
+      width: 55%;
+      aspect-ratio: 1/1;
+      background: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.3); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .about-text { padding-top: 2rem; }
+    .about-text h1 { margin-bottom: 2rem; }
+    .about-text p { color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.9; }
+    .about-text strong { color: var(--text); font-weight: 500; }
+
+    .roles-strip {
+      background: var(--off-white);
+      padding: 5rem 6rem;
+    }
+    .roles-strip h2 { margin-bottom: 3rem; }
+    .roles-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .role-item { border-top: 2px solid var(--blush); padding-top: 1.5rem; }
+    .role-item h4 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .role-item p { font-size: 0.9rem; color: var(--text-light); }
+
+    .about-values {
+      padding: 7rem 6rem;
+      background: var(--black);
+      color: #fff;
+    }
+    .about-values .section-label { color: var(--blush-deep); }
+    .about-values h2 { color: #fff; margin-bottom: 3rem; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+    .value { border-left: 2px solid var(--blush-deep); padding-left: 1.5rem; }
+    .value h4 { font-family: var(--serif); font-size: 1.3rem; color: var(--blush-light); margin-bottom: 0.75rem; }
+    .value p { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.8; }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; padding: 3rem 2rem; gap: 3rem; }
+      .about-img-secondary { display: none; }
+      .roles-strip { padding: 4rem 2rem; }
+      .roles-list { grid-template-columns: repeat(2, 1fr); }
+      .about-values { padding: 5rem 2rem; }
+      .values-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Jennifer Hanying</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu">&#9776;</button>
+  </nav>
+
+  <div class="banner">
+    <span>★ COACH · EDUCATOR · HUMANITARIAN · YOGA TEACHER · SOON-TO-BE NURSE</span>
+    <span>★ COACH · EDUCATOR · HUMANITARIAN · YOGA TEACHER · SOON-TO-BE NURSE</span>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-img-stack">
+      <div class="about-img-main"><span>Your photo here</span></div>
+      <div class="about-img-secondary"><span>Second photo</span></div>
+    </div>
+    <div class="about-text">
+      <p class="page-hero-eyebrow">About Jen</p>
+      <h1>A life spent helping people <em>rise.</em></h1>
+      <p>I'm Jen — a coach, education consultant, yoga teacher, humanitarian, and soon-to-be nurse. The through-line in everything I do is the same: I'm here to help people navigate their biggest transitions and become more fully themselves.</p>
+      <p>My path has been anything but linear. I've worked in refugee response, spent years on the front lines of women's rights work, taught yoga, traveled to 50+ countries, earned multiple degrees, and built a coaching practice that has transformed hundreds of lives. And now I'm heading to nursing school — because it turns out, when you're drawn to helping people heal and grow, there are infinite ways to answer that call.</p>
+      <p>I bring all of that to my work. When we work together — whether you're a student navigating college applications or a professional redesigning your life — you get someone who has <strong>lived</strong> transition, who has sat with uncertainty, and who knows that on the other side of a bold decision is a life that surprises you.</p>
+      <p>I believe deeply that <strong>life is meant to be lived passionately</strong>, and that clarity of vision is the first step to getting there. That's what I help you build.</p>
+      <a href="contact.html" class="btn btn-dark">Work With Me</a>
+    </div>
+  </div>
+
+  <div class="roles-strip">
+    <div class="section-label">What I Do</div>
+    <div class="roles-list">
+      <div class="role-item">
+        <h4>Life Coach</h4>
+        <p>Thousands of hours of transformational 1:1 coaching for high-achievers and visionaries.</p>
+      </div>
+      <div class="role-item">
+        <h4>Education Consultant</h4>
+        <p>Nearly 10 years helping students earn spots at top colleges and graduate programs worldwide.</p>
+      </div>
+      <div class="role-item">
+        <h4>Yoga Teacher</h4>
+        <p>Weaving mindfulness and embodiment into everything — on and off the mat.</p>
+      </div>
+      <div class="role-item">
+        <h4>Humanitarian</h4>
+        <p>Background in refugee response and women's rights. Service is not a side project; it's a core value.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-values">
+    <div class="section-label">What I Believe</div>
+    <h2>The values that drive everything.</h2>
+    <div class="values-grid">
+      <div class="value">
+        <h4>Vision first.</h4>
+        <p>You can't build a life you love without knowing what that looks like. I help you get radically clear before we take a single step.</p>
+      </div>
+      <div class="value">
+        <h4>Growth over comfort.</h4>
+        <p>Real change doesn't happen in the comfort zone. I'm here to help you grow when things get hard — not give in.</p>
+      </div>
+      <div class="value">
+        <h4>Humanity above all.</h4>
+        <p>Whether coaching, consulting, or caring for patients — I show up for the whole person, not just the presenting problem.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-dark" style="padding:6rem 4rem;">
+    <h2>Ready to start?</h2>
+    <p>Whether you need a coach, an education consultant, or just a free guide to get you moving — I've got you.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="coaching.html" class="btn btn-blush">Coaching</a>
+      <a href="education.html" class="btn btn-outline">Education Consulting</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Jennifer Hanying</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="education.html">Education</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Jennifer Hanying Wells-Qu · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

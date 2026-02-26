@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jennifer Hanying</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 73px);
+      margin-top: 73px;
+    }
+    .contact-left {
+      background: var(--black);
+      padding: 7rem 5rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-left h1 { color: #fff; margin-bottom: 1.5rem; }
+    .contact-left p { color: rgba(255,255,255,0.6); font-size: 1.05rem; line-height: 1.9; margin-bottom: 2.5rem; max-width: 440px; }
+    .contact-details { margin-top: auto; }
+    .contact-detail {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-detail:last-child { border-bottom: none; }
+    .contact-detail-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blush-deep);
+      margin-bottom: 0.4rem;
+    }
+    .contact-detail-value {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .contact-detail-value a { color: var(--blush); text-decoration: none; }
+    .contact-detail-value a:hover { color: var(--blush-light); }
+
+    .contact-right {
+      background: var(--warm-white);
+      padding: 7rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-right h2 { margin-bottom: 0.5rem; }
+    .contact-right > p { color: var(--text-light); margin-bottom: 2.5rem; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.9rem 1rem;
+      border: 1.5px solid #d4cec8;
+      background: #fff;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--blush-deep); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-success {
+      display: none;
+      background: var(--blush-light);
+      padding: 2rem;
+      text-align: center;
+      border-top: 3px solid var(--blush-deep);
+    }
+    .form-success p { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-left { padding: 5rem 2rem; }
+      .contact-right { padding: 4rem 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Jennifer Hanying</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu">&#9776;</button>
+  </nav>
+
+  <div class="contact-layout">
+    <div class="contact-left">
+      <p class="page-hero-eyebrow">Get in Touch</p>
+      <h1>Let's start the conversation.</h1>
+      <p>Whether you're ready to commit to coaching, exploring education consulting, or just want to say hello — I'd love to hear from you. I reply to every message personally.</p>
+
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-label">Text Me</div>
+          <div class="contact-detail-value"><a href="sms:4847278267">484-727-8267</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value"><a href="mailto:hello@jenniferhanying.com">hello@jenniferhanying.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Instagram</div>
+          <div class="contact-detail-value"><a href="https://instagram.com/wheresjenny" target="_blank">@wheresjenny</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Response Time</div>
+          <div class="contact-detail-value">Within 48 hours</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <h2>Send a message.</h2>
+      <p>Tell me a little about yourself and what you're looking for.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in...</label>
+          <select id="interest" name="interest">
+            <option value="">Select one</option>
+            <option value="coaching">Life Coaching (1:1)</option>
+            <option value="college">College Application Consulting</option>
+            <option value="grad">Graduate School Consulting</option>
+            <option value="essay">Essay Coaching</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me more</label>
+          <textarea id="message" name="message" placeholder="Where are you right now, and what are you hoping to change?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Send Message</button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <p><strong>Message received!</strong> I'll be in touch within 48 hours. Talk soon.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Jennifer Hanying</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="education.html">Education</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Jennifer Hanying Wells-Qu · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

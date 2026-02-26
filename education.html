@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Consulting | Jennifer Hanying</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .edu-hero {
+      margin-top: 73px;
+      background: var(--black);
+      padding: 9rem 6rem 7rem;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .edu-hero::before {
+      content: '';
+      position: absolute;
+      right: -200px; top: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,196,174,0.12) 0%, transparent 70%);
+    }
+    .edu-hero-inner { max-width: 700px; position: relative; }
+    .edu-hero h1 { color: #fff; margin-bottom: 1.5rem; }
+    .edu-hero p { color: rgba(255,255,255,0.65); font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem; max-width: 560px; }
+
+    .edu-stats {
+      background: var(--blush-light);
+      padding: 4rem 6rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat { }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blush-deep); }
+
+    .edu-services {
+      padding: 7rem 6rem;
+      background: var(--warm-white);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 3rem;
+    }
+    .service-card { background: var(--off-white); padding: 3rem 2.5rem; }
+    .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+    .service-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem; }
+
+    .edu-process {
+      padding: 7rem 6rem;
+      background: var(--off-white);
+    }
+    .edu-process h2 { margin-bottom: 4rem; max-width: 500px; }
+    .process-list { }
+    .process-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      align-items: start;
+    }
+    .process-row:first-of-type { border-top: 1px solid rgba(0,0,0,0.08); }
+    .process-row-num {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--blush);
+      line-height: 1;
+    }
+    .process-row h4 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .process-row p { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; }
+
+    .edu-who {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 60vh;
+    }
+    .edu-who-img {
+      background: linear-gradient(160deg, var(--blush-light) 0%, var(--blush) 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--stone); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .edu-who-text {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .edu-who-text h2 { margin-bottom: 1.5rem; }
+    .edu-who-text p { color: var(--text-light); margin-bottom: 1rem; line-height: 1.9; }
+
+    @media (max-width: 900px) {
+      .edu-hero { padding: 6rem 2rem 4rem; }
+      .edu-stats { grid-template-columns: repeat(2, 1fr); padding: 3rem 2rem; }
+      .edu-services { padding: 5rem 2rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .edu-process { padding: 5rem 2rem; }
+      .edu-who { grid-template-columns: 1fr; }
+      .edu-who-img { min-height: 50vw; }
+      .edu-who-text { padding: 3rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Jennifer Hanying</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu">&#9776;</button>
+  </nav>
+
+  <div class="edu-hero">
+    <div class="edu-hero-inner">
+      <p class="page-hero-eyebrow">College & Graduate School Consulting</p>
+      <h1>Your story deserves to be <em>told well.</em></h1>
+      <p>Nearly 10 years of experience helping students craft compelling applications to top universities and graduate programs. I know what admissions committees are looking for — and I know how to help you show up powerfully on the page.</p>
+      <a href="contact.html" class="btn btn-blush">Start the Conversation</a>
+    </div>
+  </div>
+
+  <div class="edu-stats">
+    <div class="stat">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Students Helped</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Top Programs</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Stories Worth Telling</div>
+    </div>
+  </div>
+
+  <div class="edu-services">
+    <div class="section-label">Services</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="what-num">01</span>
+        <h3>College Application Consulting</h3>
+        <p>Comprehensive support from school selection through final submission. Essay coaching, activity list strategy, interview prep, and everything in between.</p>
+        <a href="contact.html" class="link-arrow">Inquire →</a>
+      </div>
+      <div class="service-card" style="background:var(--black); color:#fff;">
+        <span class="what-num" style="color:rgba(232,196,174,0.3);">02</span>
+        <h3 style="color:#fff;">Graduate School Consulting</h3>
+        <p style="color:rgba(255,255,255,0.65);">MBA, law, medical, and other graduate programs. Personal statement development, school fit analysis, and a strategy to make your application stand out.</p>
+        <a href="contact.html" class="link-arrow" style="color:var(--blush); border-bottom-color:var(--blush);">Inquire →</a>
+      </div>
+      <div class="service-card">
+        <span class="what-num">03</span>
+        <h3>Essay Coaching</h3>
+        <p>Need help with just the essays? I'll help you find your story, structure it powerfully, and write with clarity and confidence. Stand-alone sessions available.</p>
+        <a href="contact.html" class="link-arrow">Inquire →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="edu-process">
+    <div class="section-label">The Approach</div>
+    <h2>How we'll build your application.</h2>
+    <div class="process-list">
+      <div class="process-row">
+        <div class="process-row-num">01</div>
+        <div>
+          <h4>Discover Your Story</h4>
+          <p>We start with who you are, not just what you've done. The best applications reveal a real person with a clear vision. We find yours.</p>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="process-row-num">02</div>
+        <div>
+          <h4>Strategize Your Schools</h4>
+          <p>Fit matters. We'll build a balanced, strategic school list based on your goals, profile, and where you'll genuinely thrive.</p>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="process-row-num">03</div>
+        <div>
+          <h4>Craft Your Essays</h4>
+          <p>This is where most consultants stop. We go further — into voice, structure, and the specific story that makes an admissions officer want to meet you.</p>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="process-row-num">04</div>
+        <div>
+          <h4>Polish + Submit</h4>
+          <p>We review everything together — activities, recommendations, supplements — until your application is a complete, cohesive picture of you at your best.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edu-who">
+    <div class="edu-who-img"><span>Your photo here</span></div>
+    <div class="edu-who-text">
+      <p class="page-hero-eyebrow">Who I Work With</p>
+      <h2>Students who have something real to say.</h2>
+      <p>My most successful clients are students who are thoughtful, curious, and ready to do the reflective work that great applications require.</p>
+      <p>You don't need to have the perfect GPA or a list of trophies. You need a genuine story and the willingness to tell it honestly. That's what gets people in.</p>
+      <p>I work with high school seniors, gap year students, and adult learners applying to graduate programs. International students welcome.</p>
+      <a href="contact.html" class="btn btn-dark" style="margin-top:1rem;">Let's Talk</a>
+    </div>
+  </div>
+
+  <section class="cta-dark">
+    <h2>Your dream program is waiting.</h2>
+    <p>Let's make sure your application is too good to ignore.</p>
+    <a href="contact.html" class="btn btn-blush">Get Started</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Jennifer Hanying</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="education.html">Education</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Jennifer Hanying Wells-Qu · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Jennifer Hanying</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-hero {
+      margin-top: 73px;
+      padding: 9rem 6rem 5rem;
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .blog-hero h1 { margin-bottom: 1rem; }
+    .blog-hero p { color: var(--text-light); max-width: 520px; font-size: 1.1rem; line-height: 1.9; }
+
+    .blog-coming-soon {
+      padding: 8rem 6rem;
+      text-align: center;
+      background: var(--off-white);
+    }
+    .coming-circle {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blush-light) 0%, var(--blush) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 3rem;
+    }
+    .coming-circle span {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--black);
+      text-align: center;
+      line-height: 1.4;
+    }
+    .blog-coming-soon h2 { margin-bottom: 1rem; }
+    .blog-coming-soon p { color: var(--text-light); max-width: 480px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.9; }
+
+    .blog-topics {
+      padding: 5rem 6rem 7rem;
+      background: var(--warm-white);
+    }
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .topic-pill {
+      padding: 1.5rem;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      text-align: center;
+      background: #fff;
+    }
+    .topic-pill h4 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .topic-pill p { font-size: 0.85rem; color: var(--text-light); }
+
+    @media (max-width: 900px) {
+      .blog-hero { padding: 6rem 2rem 4rem; }
+      .blog-coming-soon { padding: 5rem 2rem; }
+      .blog-topics { padding: 4rem 2rem; }
+      .topics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Jennifer Hanying</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu">&#9776;</button>
+  </nav>
+
+  <div class="blog-hero">
+    <p class="page-hero-eyebrow">The Blog</p>
+    <h1>Thoughts on living <em>fully.</em></h1>
+    <p>On coaching, education, mindfulness, travel, humanitarian work, and what it means to design a life that's truly yours.</p>
+  </div>
+
+  <div class="blog-coming-soon">
+    <div class="coming-circle"><span>Coming<br>Soon</span></div>
+    <h2>New content on the way.</h2>
+    <p>I'm working on essays, guides, and resources to help you think bigger and live better. In the meantime, get the free Vision Creator to start your journey today.</p>
+    <a href="index.html#vision" class="btn btn-dark">Get the Free Guide</a>
+  </div>
+
+  <div class="blog-topics">
+    <div class="section-label">What You Can Expect</div>
+    <div class="topics-grid">
+      <div class="topic-pill">
+        <h4>Coaching</h4>
+        <p>Tools, frameworks, and insights from thousands of coaching hours.</p>
+      </div>
+      <div class="topic-pill">
+        <h4>Education</h4>
+        <p>Application strategy, essay tips, and navigating the admissions process.</p>
+      </div>
+      <div class="topic-pill">
+        <h4>Mindfulness</h4>
+        <p>Yoga, meditation, and the practices that keep me grounded.</p>
+      </div>
+      <div class="topic-pill">
+        <h4>Life + Travel</h4>
+        <p>Reflections from 50+ countries and a life lived with intention.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Jennifer Hanying</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="education.html">Education</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 Jennifer Hanying Wells-Qu · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

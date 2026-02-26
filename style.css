@@ -1,0 +1,555 @@
+/* ============================================================
+   JENNIFER HANYING — Global Stylesheet
+   Aesthetic: Editorial luxury meets warm humanity
+   Fonts: Cormorant Garamond (display) + Jost (body)
+   ============================================================ */
+
+:root {
+  --black: #1a1a18;
+  --off-white: #f7f4f0;
+  --warm-white: #faf8f5;
+  --blush: #e8c4ae;
+  --blush-light: #f2e0d4;
+  --blush-deep: #c9906e;
+  --stone: #8a8278;
+  --text: #2c2a27;
+  --text-light: #6b6560;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--text);
+  background: var(--warm-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ============================================================ TYPOGRAPHY */
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(3rem, 6vw, 5.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+em { font-style: italic; }
+p { font-size: 1.05rem; }
+
+/* ============================================================ BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+}
+.btn-dark { background: var(--black); color: #fff; }
+.btn-dark:hover { background: #333; }
+.btn-outline { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+.btn-outline:hover { background: var(--black); color: #fff; }
+.btn-blush { background: var(--blush); color: var(--black); }
+.btn-blush:hover { background: var(--blush-deep); color: #fff; }
+
+.link-arrow {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  border-bottom: 1px solid var(--blush-deep);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.link-arrow:hover { border-color: var(--black); }
+
+/* ============================================================ NAV */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 4rem;
+  background: var(--warm-white);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+}
+.nav.scrolled { padding: 0.9rem 4rem; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--black); }
+
+.nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; }
+
+/* ============================================================ BANNER */
+.banner {
+  background: var(--black);
+  color: var(--blush-light);
+  display: flex;
+  gap: 3rem;
+  padding: 0.75rem 2rem;
+  overflow: hidden;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 73px;
+  white-space: nowrap;
+}
+
+/* ============================================================ HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+  align-items: center;
+}
+
+.hero-image-block {
+  height: 90vh;
+  background: #e8e2da;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4c8bc 0%, #c0b0a4 100%);
+  color: var(--stone);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-content {
+  padding: 5rem 5rem 5rem 6rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ============================================================ SECTIONS */
+.section {
+  padding: 7rem 6rem;
+  position: relative;
+}
+
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  margin-bottom: 3.5rem;
+}
+
+/* ============================================================ WHAT I DO */
+.what-i-do { background: var(--warm-white); }
+
+.what-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.what-card {
+  padding: 3rem 2.5rem;
+  background: var(--off-white);
+  position: relative;
+}
+
+.what-card--accent { background: var(--black); color: var(--off-white); }
+.what-card--accent h3 { color: #fff; }
+.what-card--accent p { color: rgba(255,255,255,0.7); }
+.what-card--accent .link-arrow { color: var(--blush); border-bottom-color: var(--blush); }
+
+.what-num {
+  display: block;
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--blush);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+.what-card--accent .what-num { color: rgba(232,196,174,0.4); }
+
+.what-card h3 { margin-bottom: 1rem; }
+
+/* ============================================================ QUOTE */
+.quote-section {
+  background: var(--black);
+  color: var(--off-white);
+  padding: 8rem 6rem;
+}
+
+.quote-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+blockquote p {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+blockquote strong { color: var(--blush); font-weight: 400; }
+
+blockquote cite {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  font-style: normal;
+}
+
+.upanishad {
+  border-left: 2px solid var(--blush-deep);
+  padding-left: 2rem;
+}
+
+.upanishad p {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.upanishad span {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+}
+
+/* ============================================================ MEET JEN */
+.meet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  background: var(--warm-white);
+}
+
+.meet-img {
+  position: relative;
+}
+
+.meet-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, var(--blush-light) 0%, var(--blush) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.meet-tag {
+  position: absolute;
+  right: -1.5rem;
+  bottom: 3rem;
+  writing-mode: vertical-rl;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.meet-content h2 { margin-bottom: 1.5rem; }
+.meet-content p { color: var(--text-light); margin-bottom: 1.2rem; }
+.meet-content .btn { margin-top: 1rem; }
+
+/* ============================================================ TESTIMONIALS */
+.testimonials { background: var(--off-white); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.testimonial {
+  padding: 2.5rem;
+  background: #fff;
+  border-top: 3px solid var(--blush);
+}
+
+.t-quote {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.t-body {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.t-attr {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+}
+
+/* ============================================================ CTA DARK */
+.cta-dark {
+  background: var(--black);
+  color: #fff;
+  text-align: center;
+  padding: 8rem 4rem;
+}
+
+.cta-dark h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.cta-dark p {
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* ============================================================ VISION */
+.vision-section {
+  background: var(--off-white);
+  padding: 8rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-section::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%; transform: translateX(-50%);
+  width: 300px; height: 300px;
+  background: linear-gradient(135deg, var(--blush-light), var(--blush));
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.vision-inner { position: relative; z-index: 1; max-width: 520px; margin: 0 auto; }
+
+.vision-eyebrow {
+  display: inline-block;
+  background: var(--blush-light);
+  padding: 0.4rem 1.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  margin-bottom: 1.5rem;
+}
+
+.vision-script {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--stone);
+  margin-bottom: 0.5rem;
+}
+
+.vision-inner h2 { margin-bottom: 1rem; }
+.vision-inner > p { color: var(--text-light); margin-bottom: 2rem; }
+
+.vision-form {
+  display: flex;
+  gap: 0;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.vision-form input {
+  flex: 1;
+  padding: 0.85rem 1.2rem;
+  border: 1.5px solid #d4cec8;
+  border-right: none;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  background: #fff;
+  outline: none;
+}
+
+.vision-form input:focus { border-color: var(--blush-deep); }
+.vision-form .btn { border-radius: 0; white-space: nowrap; }
+
+/* ============================================================ FOOTER */
+.footer {
+  background: var(--black);
+  color: rgba(255,255,255,0.5);
+  padding: 4rem 6rem;
+}
+
+.footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.footer-nav a {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover { color: var(--blush); }
+
+.footer-copy { font-size: 0.75rem; }
+
+/* ============================================================ PAGE HERO (inner pages) */
+.page-hero {
+  padding: 10rem 6rem 5rem;
+  background: var(--warm-white);
+  margin-top: 73px;
+}
+
+.page-hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  margin-bottom: 1rem;
+}
+
+.page-hero h1 { max-width: 700px; }
+.page-hero p { max-width: 580px; color: var(--text-light); font-size: 1.1rem; margin-top: 1.5rem; }
+
+/* ============================================================ MOBILE */
+@media (max-width: 900px) {
+  .nav { padding: 1.2rem 2rem; }
+  .nav-links { display: none; flex-direction: column; position: fixed; top: 73px; left: 0; right: 0; background: var(--warm-white); padding: 2rem; gap: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.07); z-index: 99; }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-image-block { height: 60vw; }
+  .hero-content { padding: 3rem 2rem; }
+
+  .section { padding: 4rem 2rem; }
+  .what-grid { grid-template-columns: 1fr; gap: 2px; }
+  .quote-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .meet { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .footer { padding: 3rem 2rem; }
+  .quote-section { padding: 5rem 2rem; }
+  .cta-dark { padding: 5rem 2rem; }
+  .page-hero { padding: 8rem 2rem 4rem; }
+
+  .vision-form { flex-direction: column; }
+  .vision-form input { border-right: 1.5px solid #d4cec8; border-bottom: none; }
+
+  .banner { gap: 1.5rem; font-size: 0.65rem; }
+}
+
+/* ============================================================ ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow { animation: fadeUp 0.6s ease 0.1s both; }
+.hero-headline { animation: fadeUp 0.6s ease 0.25s both; }
+.hero-sub { animation: fadeUp 0.6s ease 0.4s both; }
+.hero-ctas { animation: fadeUp 0.6s ease 0.55s both; }
